@@ -41,7 +41,6 @@ export default createFragmentContainer(ListPage, {
             id
             description
             imageUrl
-            ...Post_post
           }
         }
       }

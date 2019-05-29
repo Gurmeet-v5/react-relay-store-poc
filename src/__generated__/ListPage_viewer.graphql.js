@@ -8,7 +8,6 @@
 
 /*::
 import type { ReaderFragment } from 'relay-runtime';
-import type { Post_post$ref } from "./Post_post.graphql";
 import type { Post_viewer$ref } from "./Post_viewer.graphql";
 import type { FragmentReference } from "relay-runtime";
 declare export opaque type ListPage_viewer$ref: FragmentReference;
@@ -20,7 +19,6 @@ export type ListPage_viewer = {|
         +id: string,
         +description: string,
         +imageUrl: string,
-        +$fragmentRefs: Post_post$ref,
       |}
     |}>
   |},
@@ -107,11 +105,6 @@ const node/*: ReaderFragment*/ = {
                   "name": "__typename",
                   "args": null,
                   "storageKey": null
-                },
-                {
-                  "kind": "FragmentSpread",
-                  "name": "Post_post",
-                  "args": null
                 }
               ]
             },
@@ -159,5 +152,5 @@ const node/*: ReaderFragment*/ = {
   ]
 };
 // prettier-ignore
-(node/*: any*/).hash = 'b71fedc39c21c07d84b5ec921b65e978';
+(node/*: any*/).hash = '6fe55b2a968cab72d4d650bfe298cd16';
 module.exports = node;

@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 1a5dd91b33ef616a5dad8194bfe345f9
+ * @relayHash 667058f5e6d7b3c93413e443c2dd8d97
  */
 
 /* eslint-disable */
@@ -39,7 +39,6 @@ fragment ListPage_viewer on Viewer {
         id
         description
         imageUrl
-        ...Post_post
         __typename
       }
       cursor
@@ -53,12 +52,6 @@ fragment ListPage_viewer on Viewer {
 
 fragment Post_viewer on Viewer {
   id
-}
-
-fragment Post_post on Post {
-  id
-  description
-  imageUrl
 }
 */
 
@@ -228,7 +221,7 @@ return {
     "operationKind": "query",
     "name": "HomeAllPostQuery",
     "id": null,
-    "text": "query HomeAllPostQuery {\n  viewer {\n    ...ListPage_viewer\n    id\n  }\n}\n\nfragment ListPage_viewer on Viewer {\n  ...Post_viewer\n  allPosts(last: 100, orderBy: createdAt_DESC) {\n    edges {\n      node {\n        id\n        description\n        imageUrl\n        ...Post_post\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      hasPreviousPage\n      startCursor\n    }\n  }\n}\n\nfragment Post_viewer on Viewer {\n  id\n}\n\nfragment Post_post on Post {\n  id\n  description\n  imageUrl\n}\n",
+    "text": "query HomeAllPostQuery {\n  viewer {\n    ...ListPage_viewer\n    id\n  }\n}\n\nfragment ListPage_viewer on Viewer {\n  ...Post_viewer\n  allPosts(last: 100, orderBy: createdAt_DESC) {\n    edges {\n      node {\n        id\n        description\n        imageUrl\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      hasPreviousPage\n      startCursor\n    }\n  }\n}\n\nfragment Post_viewer on Viewer {\n  id\n}\n",
     "metadata": {}
   }
 };

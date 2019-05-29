@@ -46,13 +46,6 @@ const FragmentContainer = createFragmentContainer(Post, {
     fragment Post_viewer on Viewer {
       id
     }
-  `,
-  post: graphql`
-    fragment Post_post on Post {
-      id
-      description
-      imageUrl
-    }
   `
 });
 
